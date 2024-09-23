@@ -379,11 +379,12 @@ def tag_large(data_in, output, device, batch_size, force_reload, force_download)
         device: cpu or cuda
     """
     model: Tagger = torch.hub.load(
-        repo_or_dir="cadia-lvl/POS",
+        repo_or_dir="icelandic-lt/POS",
         model="tag_large",
         device=device,
         force_reload=force_reload,
         force_download=force_download,
+        trust_repo=True,
     )
     run_model(model, data_in, output, batch_size, Fields.Tags)
 
@@ -408,11 +409,12 @@ def tag(data_in, output, device, batch_size, force_reload, force_download):
         device: cpu or cuda
     """
     model: Tagger = torch.hub.load(
-        repo_or_dir="cadia-lvl/POS",
+        repo_or_dir="icelandic-lt/POS",
         model="tag",
         device=device,
         force_reload=force_reload,
         force_download=force_download,
+        trust_repo=True,
     )
     run_model(model, data_in, output, batch_size, Fields.Tags)
 
@@ -437,11 +439,12 @@ def lemma(data_in, output, device, batch_size, force_reload, force_download):
         device: cpu or cuda
     """
     model: Tagger = torch.hub.load(
-        repo_or_dir="cadia-lvl/POS",
+        repo_or_dir="icelandic-lt/POS",
         model="lemma",
         device=device,
         force_reload=force_reload,
         force_download=force_download,
+        trust_repo=True,
     )
     log.info("Reading dataset")
     ds = FieldedDataset.from_file(data_in, fields=(Fields.Tokens, Fields.GoldTags))

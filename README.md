@@ -1,8 +1,13 @@
+![Version](https://img.shields.io/badge/Version-3.1.0-darkviolet)
+![Python](https://img.shields.io/badge/python-3.8|3.9-blue?logo=python&logoColor=white)
+![CI Status](https://github.com/icelandic-lt/POS/actions/workflows/python-package.yml/badge.svg)
+![Docker](https://img.shields.io/badge/Docker-green)
+
 # POS tagger and lemmatizer for Icelandic
 The goal of this project is to create a combined part-of-speech tagger and lemmatizer for Icelandic using the revised fine-grained tagging schema for Icelandic.
 For further information about the schema see [MIM-Gold on CLARIN-IS](https://repository.clarin.is/repository/xmlui/handle/20.500.12537/40) (the description pdf).
 
-This work is based on the ABLTagger (in [References](#references)) but with considerable model modifications and runs on Python 3.8, PyTorch 1.7.0+ and [transformers 4.1.1+](https://github.com/huggingface/transformers).
+This work is based on the ABLTagger (in [References](#references)) but with considerable model modifications and runs on Python 3.8, PyTorch 1.7.0,<2.0.0 and [transformers >=4.1.1,<=4.28.0](https://github.com/huggingface/transformers).
 
 - [Versions](#versions)
 - [Installation](#installation)
@@ -267,7 +272,7 @@ For additional information, see the docstrings provided.
 </a>
 <!-- Made with [contributors-img](https://contributors-img.web.app). -->
 
-- Haukur Páll Jónsson (current maintainer)
+- Haukur Páll Jónsson
 - Örvar Kárason
 - Steinþór Steingrímsson
 
@@ -321,7 +326,7 @@ vill    sfg3en
 .       pl
 ```
 
-For Icelandic we used the [IDF](https://repository.clarin.is/repository/xmlui/handle/20.500.12537/38) and [MIM-GOLD](https://repository.clarin.is/repository/xmlui/handle/20.500.12537/40).
+For Icelandic we used the [IFD](https://repository.clarin.is/repository/xmlui/handle/20.500.12537/38) and [MIM-GOLD](https://repository.clarin.is/repository/xmlui/handle/20.500.12537/40) (*Ice*. OTB).
 We use the 10th fold (in either dataset) for hyperparameter selection.
 
 We provide some additional data which is used to train the model:
