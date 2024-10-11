@@ -6,7 +6,7 @@ import pos
 # Initialize the tagger
 device = torch.device("cpu")  # CPU
 tagger: pos.Tagger = torch.hub.load(
-    repo_or_dir="cadia-lvl/POS",
+    repo_or_dir="icelandic-lt/POS",
     model="tag",
     device=device,
     force_reload=False,
