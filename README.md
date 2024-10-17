@@ -9,7 +9,7 @@ For further information about the schema see [MIM-Gold tagset](MIM_gold_tagset_2
 
 # Status
 
-This project is a successor to the [ABLTager](https://github.com/steinst/ABLTagger) by using modernized frameworks, some model modifications and Embedding model adaptations. However, the base principles are the same.
+This project is a successor to the [ABLTagger](https://github.com/steinst/ABLTagger) by using modernized frameworks, some model modifications and Embedding model adaptations. However, the base principles are the same.
 The accuracy of the models is however not better than with much simpler approaches used e.g. in [IceEval](https://github.com/icelandic-lt/IceEval), where a general Icelandic Language model is fine-tuned to the PoS tagging task. Therefore, it should be considered, using those approaches instead.
 
 Please also note findings in the Paper [Is Part-of-Speech Tagging a Solved Problem for Icelandic?](https://aclanthology.org/2023.nodalida-1.8.pdf), for gaining more insights into the performance of these models.
