@@ -5,7 +5,16 @@
 
 # POS tagger and lemmatizer for Icelandic
 The goal of this project is to create a combined part-of-speech tagger and lemmatizer for Icelandic using the revised fine-grained tagging schema for Icelandic.
-For further information about the schema see [MIM-Gold on CLARIN-IS](https://repository.clarin.is/repository/xmlui/handle/20.500.12537/40) (the description pdf).
+For further information about the schema see [MIM-Gold tagset](MIM_gold_tagset_2.0.pdf).
+
+# Status
+
+This project is a successor to the [ABLTager](https://github.com/steinst/ABLTagger) by using modernized frameworks, some model modifications and Embedding model adaptations. However, the base principles are the same.
+The accuracy of the models is however not better than with much simpler approaches used e.g. in [IceEval](https://github.com/icelandic-lt/IceEval), where a general Icelandic Language model is fine-tuned to the PoS tagging task. Therefore, it should be considered, using those approaches instead.
+
+Please also note findings in the Paper [Is Part-of-Speech Tagging a Solved Problem for Icelandic?](https://aclanthology.org/2023.nodalida-1.8.pdf), for gaining more insights into the performance of these models.
+
+# Description
 
 This work is based on the ABLTagger (in [References](#references)) but with considerable model modifications and runs on Python 3.8, PyTorch 1.7.0,<2.0.0 and [transformers >=4.1.1,<=4.28.0](https://github.com/huggingface/transformers).
 
@@ -31,14 +40,14 @@ This work is based on the ABLTagger (in [References](#references)) but with cons
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 # Versions
-See [releases](https://github.com/cadia-lvl/POS/releases)
+See [releases](https://github.com/icelandic-lt/POS/releases)
 
 # Installation
 To use a pretrained model follow the instructions below.
 
 ```
-# Using v3.1.0 - consider using the latest version: [releases](https://github.com/cadia-lvl/POS/releases)
-pip install git+https://github.com/cadia-lvl/POS.git@v3.1.0
+# Using v3.1.0 - consider using the latest version: [releases](https://github.com/icelandic-lt/POS/releases)
+pip install git+https://github.com/icelandic-lt/POS.git@v3.1.0
 ```
 The models will be downloaded automatically when needed. The models are stored in `~/.cache/torch/hub`, for more information see [Torch hub documentation](https://pytorch.org/docs/stable/hub.html)
 
@@ -233,7 +242,7 @@ import pos
 # Initialize the tagger
 device = torch.device("cpu")  # CPU
 tagger: pos.Tagger = torch.hub.load(
-    repo_or_dir="cadia-lvl/POS",
+    repo_or_dir="icelandic-lt/POS",
     model="tag", # This specifies which model to use. Set to 'tag_large' for large model.
     device=device,
     force_reload=False,
@@ -267,8 +276,8 @@ For additional information, see the docstrings provided.
 [Apache v2.0](LICENSE)
 
 # Authors
-<a href="https://github.com/cadia-lvl/POS/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=cadia-lvl/POS" />
+<a href="https://github.com/icelandic-lt/POS/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=icelandic-lt/POS" />
 </a>
 <!-- Made with [contributors-img](https://contributors-img.web.app). -->
 
